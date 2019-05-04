@@ -206,7 +206,7 @@ usuarioRoutes.get('/:pagina/:Npaginas', autenticacion_1.default, function (req, 
     pagina = Number(pagina);
     var Npaginas = req.params.Npaginas || 2;
     Npaginas = Number(Npaginas);
-    usuario_1.Usuario.find({}, 'nombre apellido email password rol')
+    usuario_1.Usuario.find({}, 'nombre apellido email password rol') // -
         .skip(pagina)
         .limit(Npaginas)
         .exec(function (err, usuarios) {

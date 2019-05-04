@@ -253,7 +253,7 @@ usuarioRoutes.get ('/:pagina/:Npaginas',verificatoken, (req:Request, res:Respons
     var Npaginas = req.params.Npaginas || 2
     Npaginas = Number (Npaginas);
 
-    Usuario.find({}, 'nombre apellido email password rol')
+    Usuario.find({}, 'nombre apellido email password rol') // -
             .skip(pagina)
             .limit(Npaginas)
             .exec( (err: any,usuarios:any) => {
