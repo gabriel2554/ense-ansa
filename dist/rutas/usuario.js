@@ -134,7 +134,7 @@ usuarioRoutes.post('/buscar', autenticacion_1.default, function (req, res) {
             mensaje: 'se necesita permiso de administrador'
         });
     }
-    usuario_1.Usuario.find({ nombre: regex }, 'nombre', function (err, usuarioDB) {
+    usuario_1.Usuario.find({ nombre: regex }, 'nombre apellido rol', function (err, usuarioDB) {
         if (err) {
             return res.status(500).json({
                 ok: false,
@@ -164,7 +164,7 @@ usuarioRoutes.post('/buscar/apellido', autenticacion_1.default, function (req, r
     var regex = new RegExp(termino, 'i');
     var user = req.body.usuario;
     console.log(user);
-    usuario_1.Usuario.find({ apellido: regex }, 'apellido', function (err, usuarioAP) {
+    usuario_1.Usuario.find({ apellido: regex }, 'apellido nombre rol', function (err, usuarioAP) {
         if (err) {
             return res.status(500).json({
                 ok: false,

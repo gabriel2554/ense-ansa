@@ -164,7 +164,7 @@ usuarioRoutes.post('/buscar', verificatoken, (req:Request, res:Response) =>{
         });
     }
 
-    Usuario.find({nombre:regex}, 'nombre', (err:any, usuarioDB)=> {
+    Usuario.find({nombre:regex}, 'nombre apellido rol', (err:any, usuarioDB)=> {
         if (err) {
            return res.status(500).json({
                 ok: false,
@@ -199,7 +199,7 @@ usuarioRoutes.post('/buscar/apellido', verificatoken, (req:Request, res:Response
     console.log(user);
 
 
-    Usuario.find( {apellido:regex},'apellido', (err:any,usuarioAP) =>{
+    Usuario.find( {apellido:regex},'apellido nombre rol', (err:any,usuarioAP) =>{
         if (err) {
             return res.status(500).json({
                 ok:false,
