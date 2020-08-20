@@ -16,7 +16,7 @@
     "@types/mongoose": "^5.3.24",
     "@types/mongoose-unique-validator": "^1.0.1",
     "@types/node": "^11.13.0",
-    "bcrypt": "^3.0.5",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
     "express": "^4.16.4",
